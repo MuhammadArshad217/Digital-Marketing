@@ -105,6 +105,58 @@
     a {
       word-break: break-word;
     }
+
+    .hero-border {
+  position: relative;
+  padding: 2.5rem;
+  margin: 3rem 0;
+  border-radius: 16px;
+  background: #0f0f0f; /* or #fff if light theme */
+  z-index: 1;
+}
+
+/* Gradient Border Effect */
+.hero-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 16px;
+  background: linear-gradient(
+    120deg,
+    #ff7a18,
+    #ffb347,
+    #6a11cb,
+    #2575fc,
+    #00c6ff
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Soft Glow (Hero Feel) */
+.hero-border::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 20px;
+  background: linear-gradient(
+    120deg,
+    #ff7a18,
+    #ffb347,
+    #6a11cb,
+    #2575fc,
+    #00c6ff
+  );
+  filter: blur(18px);
+  opacity: 0.35;
+  z-index: -2;
+}
+
   </style>
 </head>
 <body>
@@ -143,6 +195,67 @@
         <span>Locakl Falcon</span><span>Bright Local</span>
       </div>
     </section>
+
+
+    <section class="project hero-border">
+      <section class="project">
+  <div class="project-content">
+    <h3>SEO Growth & Affiliate Monetization – Homes & Looms</h3>
+
+    <p>
+      <strong>Objective:</strong>
+      Build an affiliate content website from scratch with a research-driven SEO strategy,
+      achieve consistent organic visibility, keyword rankings, and generate first organic sales
+      without relying on automation tools.
+    </p>
+
+    <p>
+      <strong>Tools Used:</strong>
+      Google Search Console, Google Analytics, SEMrush, Rank Math, Manual SERP Analysis
+    </p>
+
+    <p>
+      <strong>Key Work:</strong>
+      Complete SEO execution from ground zero. Performed in-depth competitor analysis and
+      keyword research, created detailed content briefs and outlines for every article,
+      manually wrote and published 56 fully SEO-optimized articles. Implemented strategic
+      internal linking, on-page optimization, and schema markup. All decisions were
+      research-based and manually executed rather than tool-generated.
+    </p>
+
+    <p>
+      <strong>Results (Last 4 Months):</strong><br>
+      • 94.6k Impressions | 478 Clicks | 0.5% CTR<br>
+      • Average Position: 16 (Google Search Console)<br>
+      • 350+ keyword coverage (SEMrush)<br>
+      • Rank Math: 100 keywords in Top 3, 88 keywords in positions 4–10,
+        113 keywords in positions 10–51<br>
+      • Affiliate website achieved first organic sale generating
+        <strong>$6.53 in organic revenue</strong>
+    </p>
+
+    <img
+      src="https://homesandlooms.com/wp-content/uploads/2026/01/GSC-Results.png"
+      alt="Google Search Console Results"
+      class="project-image"
+    >
+
+    <img
+      src="https://homesandlooms.com/wp-content/uploads/2026/01/Screenshot-2026-01-19-220829.png"
+      alt="Rank Math Keyword Positions"
+      class="project-image"
+    >
+
+    <img
+      src="https://homesandlooms.com/wp-content/uploads/2026/01/Screenshot-2026-01-19-221107.png"
+      alt="Affiliate Income Proof"
+      class="project-image"
+    >
+  </div>
+</section>
+
+
+    
 
     <section>
       <h2>Projects: wavewear.uk</h2>
@@ -221,5 +334,6 @@
   </footer>
 </body>
 </html>
+
 
 
